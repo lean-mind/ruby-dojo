@@ -11,6 +11,10 @@ It takes care of:
 
 ## Working with the boilerplate
 
+Clone this repository:
+
+`git clone https://github.com/platanus/ruby-dojo.git`
+
 Start **guard**:
 
 `bundle exec guard`
