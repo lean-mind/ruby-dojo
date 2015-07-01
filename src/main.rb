@@ -1,3 +1,3 @@
-require File.expand_path('../../boot.rb', __FILE__)
+require File.expand_path('../../sup/boot.rb', __FILE__)
 
 # Put your app logic here
