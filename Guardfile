@@ -17,13 +17,10 @@
 
 
 guard :rspec, {
-  :cmd => 'bundle exec rspec',
-  :version => 2,
-  :cli => "--color --drb -r rspec/instafail -f RSpec::Instafail",
-  :bundler => false,
+  :cmd => 'bundle exec rspec --color',
   :all_after_pass => false,
   :all_on_start => false,
-  :keep_failed => false
+  :failed_mode => :keep
 } do
   watch('spec/spec_helper.rb')                                               { "spec" }
   watch(%r{^src/(.+)\.rb})                                                   { |m| "spec/#{m[1]}_spec.rb" }
