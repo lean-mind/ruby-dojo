@@ -9,5 +9,5 @@ Bundler.setup
 APP_PATH = File.expand_path('../', __FILE__)
 
 require 'active_support/dependencies'
-ActiveSupport::Dependencies.autoload_paths += Dir.glob File.join(APP_PATH, 'src', '*.rb')
-ActiveSupport::Dependencies.autoload_paths += Dir.glob File.join(APP_PATH, 'src', '**')
+ActiveSupport::Dependencies.autoload_paths += Dir.glob File.join(APP_PATH, 'src')
+ActiveSupport::Dependencies.mechanism = :require
