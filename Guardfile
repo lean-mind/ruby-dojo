@@ -23,5 +23,6 @@ guard :rspec, {
   :failed_mode => :keep
 } do
   watch('spec/spec_helper.rb')                                               { "spec" }
+  watch(%r{^spec/.+\.rb})                                                    { |m| m[0] }
   watch(%r{^src/(.+)\.rb})                                                   { |m| "spec/#{m[1]}_spec.rb" }
 end
